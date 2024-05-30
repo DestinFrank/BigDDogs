@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigDogs - Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #D2691E; /* Brown */
+            color: #FFD700; /* Gold */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #FFA500; /* Orange */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #FF8C00; /* Darker Orange */
+        }
+        section {
+            padding: 20px;
+        }
+        .checkout {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout h2 {
+            text-align: center;
+        }
+        .checkout form {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout label {
+            margin-bottom: 10px;
+        }
+        .checkout input[type="text"], 
+        .checkout input[type="email"], 
+        .checkout input[type="tel"], 
+        .checkout input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .checkout input[type="submit"] {
+            background-color: #D2691E; /* Brown */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkout input[type="submit"]:hover {
+            background-color: #A52A2A; /* Darker Brown */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to BigDogs</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="foods.html">Our Foods</a>
+    </nav>
+    <section id="checkout" class="checkout">
+        <h2>Checkout</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+            <input type="submit" value="Checkout">
+        </form>
+    </section>
+</body>
+</html>
