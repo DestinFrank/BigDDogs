@@ -36,19 +36,42 @@
             background-color: #f9f9f9;
             border-radius: 10px;
             padding: 20px;
-            max-width: 600px;
+            max-width: 800px; /* Increased max-width */
             margin: 20px auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; /* Added display flex */
+            flex-direction: row; /* Arranged in row */
         }
         .checkout h2 {
             text-align: center;
         }
         .checkout form {
-            display: flex;
-            flex-direction: column;
+            flex: 1; /* Added flex: 1 to take remaining space */
+            margin-right: 20px; /* Added margin-right for spacing */
         }
-        .checkout label {
-            margin-bottom: 10px;
+        .checkout .view-area {
+            flex: 1; /* Added flex: 1 */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+        .view-area h3 {
+            text-align: center; /* Center-align heading */
+        }
+        .view-area ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+        }
+        .view-area ul li {
+            margin-bottom: 10px; /* Add spacing between items */
+        }
+        .view-area ul li:last-child {
+            margin-bottom: 0; /* Remove bottom margin for last item */
+        }
+        .view-area ul li span {
+            float: right; /* Float price to right */
+            font-weight: bold; /* Bold font weight */
         }
         .checkout input[type="text"], 
         .checkout input[type="email"], 
@@ -58,6 +81,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 10px;
+            width: calc(100% - 18px); /* Adjusted width */
         }
         .checkout input[type="submit"] {
             background-color: #D2691E; /* Brown */
@@ -66,6 +90,7 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%; /* Full width */
         }
         .checkout input[type="submit"]:hover {
             background-color: #A52A2A; /* Darker Brown */
@@ -78,23 +103,38 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">App Download</a>
         <a href="mission.html">Our Mission</a>
         <a href="foods.html">Our Foods</a>
     </nav>
     <section id="checkout" class="checkout">
-        <h2>Checkout</h2>
-        <form action="#">
+        <form action="#" class="checkout-form">
+            <h2>Checkout</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+            <label for="expiry-date">Expiration Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
             <input type="submit" value="Checkout">
         </form>
+        <div class="view-area">
+            <h3>Order Summary</h3>
+            <ul>
+
+                <li>Total <span id="totalPrice">Error, please download the app.</span></li>
+            </ul>
+        </div>
     </section>
+
+
 </body>
 </html>
