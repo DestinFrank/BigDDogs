@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" type="image/png">
+
+    <title>BigDogs - Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #D2691E; 
+            color: #FFD700; 
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #FFA500; 
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #FF8C00; 
+        }
+        section {
+            padding: 20px;
+        }
+        .review {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .review h2 {
+            text-align: center;
+        }
+        .review label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .review textarea,
+        .review input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        .review select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .review input[type="submit"] {
+            background-color: #D2691E; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .review input[type="submit"]:hover {
+            background-color: #A52A2A; 
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .review-item p {
+            margin: 5px 0;
+        }
+        .review-item .rating {
+            color: #D2691E;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to BigDogs, the world's best dogs!</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">App Download</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="foods.html">Our Foods</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+    <section id="review" class="review">
+        <h2>We hope you enjoyed your experience!</h2>
+        <form id="reviewForm">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="feedback">Leave a Review:</label>
+            <textarea name="feedback" id="feedback" rows="5" placeholder="Your feedback..." required></textarea>
+            <label for="rating">Rate your experience (1-5):</label>
+            <select name="rating" id="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="submit" value="Submit Review">
+        </form>
+        <div class="reviews" id="reviewsList">
+ 
+            <div class="review-item">
+                <p><strong>John Doe:</strong> Best hot dogs I've ever tasted! Amazing service too!</p>
+                <div class="rating">Rating: 5</div>
+            </div>
+            <div class="review-item">
+                <p><strong>Jane Smith:</strong> The hot dogs were delicious, and the staff was friendly.</p>
+                <div class="rating">Rating: 4</div>
+            </div>
+            <div class="review-item">
+                <p><strong>Michael Johnson:</strong> Good quality hot dogs, but a bit pricey.</p>
+                <div class="rating">Rating: 3</div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+           
+            const name = document.getElementById('name').value;
+            const feedback = document.getElementById('feedback').value;
+            const rating = document.getElementById('rating').value;
+            
+          
+            const reviewItem = document.createElement('div');
+            reviewItem.classList.add('review-item');
+            reviewItem.innerHTML = `
+                <p><strong>${name}:</strong> ${feedback}</p>
+                <div class="rating">Rating: ${rating}</div>
+            `;
+            
+           
+            document.getElementById('reviewsList').appendChild(reviewItem);
+            
+           
+            document.getElementById('reviewForm').reset();
+        });
+    </script>
+</body>
+</html>
