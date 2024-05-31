@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigDogs - Pricing</title>
+    <link rel="icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" type="image/png">
+
+    <title>BigDogs - Mission</title>
     <style>
-body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #D2691E; /* Brown */
-            color: #FFD700; /* Gold */
+            background-color: #D2691E; 
+            color: #FFD700; 
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #FFA500; /* Orange */
+            background-color: #FFA500;
             padding: 10px;
             text-align: center;
         }
@@ -27,22 +29,45 @@ body {
             padding: 10px 20px;
         }
         nav a:hover {
-            background-color: #FF8C00; /* Darker Orange */
+            background-color: #FF8C00;
         }
         section {
             padding: 20px;
+            text-align: center;
         }
         img {
             display: block;
-            margin: auto; /* Center the image */
+            margin: auto; 
             max-width: 100%;
             height: auto;
+            margin-bottom: 20px;
+        }
+        .progress-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .progress-item {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .progress-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .progress-item h3 {
+            color: #D2691E;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to BigDogs</h1>
+        <h1>Welcome to BigDogs, the world's best dogs!</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -52,8 +77,25 @@ body {
     </nav>
     <section id="mission">
         <h2>Our Mission</h2>
-        <p>At BigDogs, our mission is to provide delicious hotdogs made with the finest ingredients and served with a smile.</p>
-    </section>
+        <p>At BigDogs, our journey started with a simple hotdog stand. Through dedication and passion, we've grown into a beloved brand known for our delicious hotdogs served with a smile. Here's a glimpse of our progress:</p>
+        <div class="progress-container">
+            <div class="progress-item">
+                <img src="https://media.blogto.com/articles/8f6e-20150721-Food-Cart.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70" alt="Start of the Journey">
+                <h3>Establishment</h3>
+                <p>Our humble beginnings with our first hotdog stand.</p>
+            </div>
+            <div class="progress-item">
+                <img src="https://ecurrent-com-images.s3.amazonaws.com/wp-content/uploads/2021/07/bills-hot-dog-stand.jpg" alt="Expansion">
+                <h3>Expansion</h3>
+                <p>Expanding our reach to multiple locations in the city.</p>
+            </div>
+            <div class="progress-item">
+                <img src="https://bensbeerblog.com/wp-content/uploads/2013/05/lineup.jpg?w=700&h=465" alt="Recognition">
+                <h3>Recognition</h3>
+                <p>Hundreds of people line up outside our stores every day.</p>
+            </div>
+        </div>
+        <p>But we're not stopping here. We're on a mission to become one of the best restaurants in the world!</p>
     </section>
 </body>
 </html>

@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" type="image/png">
-
     <title>BigDogs - Pricing</title>
     <style>
         body {
@@ -14,13 +12,13 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #D2691E; 
-            color: #FFD700;
+            background-color: #D2691E; /* Brown */
+            color: #FFD700; /* Gold */
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #FFA500;
+            background-color: #FFA500; /* Orange */
             padding: 10px;
             text-align: center;
         }
@@ -30,7 +28,7 @@
             padding: 10px 20px;
         }
         nav a:hover {
-            background-color: #FF8C00;
+            background-color: #FF8C00; /* Darker Orange */
         }
         section {
             display: flex;
@@ -42,27 +40,27 @@
         }
         .item-container {
             width: calc(33.33% - 40px);
-            background-color: #ddd;
+            background-color: #ddd; /* Light Gray */
             padding: 20px;
             border-radius: 10px;
             margin: 10px;
             position: relative;
-            transition: transform 0.3s; 
+            transition: transform 0.3s; /* Added for smooth image scaling */
         }
         .item-container:hover {
-            transform: scale(1.1); 
+            transform: scale(1.1); /* Scale up the image on hover */
         }
         .item-container img {
             display: block;
             margin: auto;
-            height: 200px; 
+            max-width: 100%;
             border-radius: 10px;
             margin-bottom: 10px;
             cursor: pointer;
         }
         .description {
             text-align: center;
-            color: #333; 
+            color: #333; /* Dark Gray */
             display: none;
             position: absolute;
             left: 0;
@@ -71,7 +69,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             padding: 10px;
             border-radius: 5px;
-            z-index: 1; 
+            z-index: 1; /* Set z-index to ensure description is displayed above the image */
         }
         .title {
             font-weight: bold;
@@ -81,7 +79,7 @@
             display: block;
         }
         .buy-button {
-            background-color: #4CAF50; 
+            background-color: #4CAF50; /* Green */
             border: none;
             color: white;
             padding: 10px 20px;
@@ -92,17 +90,17 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            position: relative; 
-            z-index: 2; 
+            position: relative; /* Set position to relative to allow z-index */
+            z-index: 2; /* Set z-index higher than the description */
         }
         .buy-button:hover {
-            background-color: #45a049; 
+            background-color: #45a049; /* Darker Green */
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>Welcome to BigDogs, the world's best dogs!</h1>
+    <h1>Welcome to BigDogs, worlds best dogs</h1>
 </header>
 <nav>
     <a href="index.html">Home</a>
@@ -206,4 +204,3 @@
 
 </body>
 </html>
-

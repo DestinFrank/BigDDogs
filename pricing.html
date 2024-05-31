@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" type="image/png">
+
     <title>BigDogs - Download Our App</title>
     <style>
         body {
@@ -11,13 +13,13 @@
             padding: 0;
         }
         header {
-            background-color: #D2691E; /* Brown */
-            color: #FFD700; /* Gold */
+            background-color: #D2691E; 
+            color: #FFD700;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #FFA500; /* Orange */
+            background-color: #FFA500; 
             padding: 10px;
             text-align: center;
         }
@@ -27,7 +29,7 @@
             padding: 10px 20px;
         }
         nav a:hover {
-            background-color: #FF8C00; /* Darker Orange */
+            background-color: #FF8C00; 
         }
         section {
             padding: 20px;
@@ -42,19 +44,23 @@
             margin: 20px auto;
         }
         .app-download h2 {
-            color: #D2691E; /* Brown */
+            color: #D2691E; 
             margin-bottom: 20px;
         }
         .app-download p {
             font-size: 18px;
             margin-bottom: 20px;
         }
-        .app-download img {
-            max-width: 200px;
+        .app-download .image-container {
             margin-bottom: 20px;
         }
+        .app-download img {
+            max-width: 200px;
+            margin: auto; 
+            display: block; 
+        }
         .app-download button {
-            background-color: #D2691E; /* Brown */
+            background-color: #D2691E; 
             color: white;
             border: none;
             padding: 10px 20px;
@@ -64,13 +70,13 @@
             transition: background-color 0.3s ease;
         }
         .app-download button:hover {
-            background-color: #A52A2A; /* Darker Brown */
+            background-color: #A52A2A; 
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to BigDogs</h1>
+        <h1>Welcome to BigDogs, the world's best dogs!</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -81,8 +87,10 @@
     <section id="download-app" class="app-download">
         <h2>Download Our App</h2>
         <p>Get the BigDogs app now for exclusive offers, faster ordering, and more!</p>
-        <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" alt="App Icon">
-        <button>Download Now</button>
+        <div class="image-container">
+            <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hot_Dog_Clipart_Image.png?m=1629831553" alt="App Icon">
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.example.bigdogs"><button>Download Now</button></a>
     </section>
 </body>
 </html>
